@@ -1,0 +1,197 @@
+:root {
+  --primary-color: #35a22c;
+}
+
+header .navbar-brand i {
+  color: var(--primary-color);
+}
+
+header .nav-link {
+  position: relative;
+  margin: 0 15px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+header .nav-item .nav-link.active {
+  color: var(--primary-color);
+}
+
+header .nav-item .active.nav-link::before {
+  width: 100%;
+}
+
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+header .nav-link:hover::before {
+  width: 100%;
+}
+
+header .nav-link:not(.active) {
+  color: white;
+}
+
+header .nav-link:not(.active):hover {
+  color: var(--primary-color);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Carousel */
+
+.carousel .carousel-logo {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.carousel h2 {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.carousel p {
+  font-size: 24px;
+}
+
+.carousel .carousel-caption {
+  /* min-width: 70%;
+  top: 50%;
+  left: 50%;
+  bottom: unset;
+  right: unset;
+  transform: translate(-50%, -50%); */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 43, 54, 0.5);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* project */
+.project .nav {
+  justify-content: center;
+}
+
+.project .nav-item .nav-link {
+  margin: 0 5px;
+}
+
+.project .nav-item .nav-link:not(.active) {
+  border: 1px solid #1a1d2d;
+  color: black;
+}
+
+.project .nav-item .nav-link.active {
+  background-color: var(--primary-color);
+}
+
+.project-item {
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.project-text {
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-top: none;
+  transition: all 0.3s;
+}
+
+.project-item:hover .project-text {
+  border-color: #35a22c;
+}
+
+.project-text h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+}
+
+.project-item:hover h3 {
+  color: #35a22c;
+}
+
+.project-text span {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.available {
+  /* height: 100vh; */
+  background-image: url(./../image/3.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 100px 0 120px;
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.available-title {
+  max-width: 750px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 10, 12, 0.72);
+}
+
+.available-item {
+  position: relative;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+  /* glassmorphism background */
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.available-item h4 {
+  margin: 25px 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.available-item:hover {
+  background-color: black;
+  border-color: #fff;
+}
